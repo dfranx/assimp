@@ -1135,11 +1135,11 @@ ADD_LIBRARY( assimp ${assimp_src} )
 ADD_LIBRARY(assimp::assimp ALIAS assimp)
 
 # enable warnings as errors ########################################
-IF (MSVC)
-  TARGET_COMPILE_OPTIONS(assimp PRIVATE /WX)
-ELSE()
-  TARGET_COMPILE_OPTIONS(assimp PRIVATE -Werror)
-ENDIF()
+# IF (MSVC)
+#   TARGET_COMPILE_OPTIONS(assimp PRIVATE /WX)
+# ELSE()
+#   TARGET_COMPILE_OPTIONS(assimp PRIVATE -Werror)
+# ENDIF()
 
 TARGET_INCLUDE_DIRECTORIES ( assimp PUBLIC
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/../include>
